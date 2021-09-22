@@ -1,0 +1,494 @@
+
+
+/* 
+font-family: 'Satisfy', cursive; */
+* {
+    box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+/* ========================= */
+/* Navbar-section start */
+/* ========================= */
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.navbar h1 {
+    text-align: center;
+    color: #fff;
+    margin: 0;
+    padding-top: 10px;
+}
+
+a {
+    color: #fff;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: .3s;
+}
+p {
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+.dotted-hr {
+    border: dotted 6px #fff;
+    border-bottom: none;
+    margin: 20px auto;
+    width: 70px;
+}
+
+[class*="col-"]{
+    float: left;
+    padding: 10px;
+}
+/* for mobile */
+[class*="col-"]{
+    width: 100%;
+}
+
+.navbar {
+    background-color: #0c6168;
+    padding: 1% 7%;
+    text-align: center;
+}
+.navbar::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+}
+
+.nav-menu a {
+    background-color: #3f0c68;
+    border-radius: 10px;
+    margin: 7px 0px;
+    padding: 10px;
+}
+
+.nav-menu a:hover {
+    background-color: gray;
+}
+
+/* ========================= */
+/* Navbar-section end */
+/* ========================= */
+
+
+/* ========================= */
+/* profile-section start*/
+/* ========================= */
+
+.profile {
+    padding: 130px 10px;
+    position: relative;
+    text-align: center;
+}
+
+.profile-para {
+    margin-bottom: 60px;
+}
+
+.profile .top-weather-icon {
+    position: absolute;
+    top: 20px;
+    right: 60px;
+    width: 150px;
+    transition: width 2s, transform 2s;
+}
+
+.profile .top-weather-icon:hover {
+    transform: rotate(360deg);
+}
+
+.profile-desc h1 {
+    font-family: 'Satisfy', cursive;
+    font-size: 3rem;
+}
+
+.profile-desc p {
+    color: gray;
+    text-align: center;
+    width: 90%;
+    margin: 0 auto 20px auto;
+}
+
+
+.profile .bottom-weather-icon {
+    position: absolute;
+    left: 60px;
+    width: 150px;
+    transition: width 2s, transform 2s;
+}
+
+
+.profile .bottom-weather-icon:hover {
+    transform: rotate(360deg);
+}
+
+.profile::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+/* ========================= */
+/* profile-section end*/
+/* ========================= */
+
+/* ========================= */
+/* About-section start*/
+/* ========================= */
+.about {
+    background-color: #39a4ac;
+    padding: 1% 7%;
+    color: #fff;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif; 
+}
+
+.about::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.about p {
+    text-align: center;
+}
+
+.about-image img {
+    border: 5px solid #fff;
+    border-radius: 50%;
+    height: 220px;
+    width: 200px;
+}
+
+.cv-button {
+    background-color: #052d2f;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    border-radius: 7px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    margin: 10px;
+}
+/* ========================= */
+/* About-section end*/
+/* ========================= */
+
+
+
+
+/* ========================= */
+/* professional-section start*/
+/* ========================= */
+
+.professional-experience {
+    padding: 1% 1%;
+}
+
+
+.professional-experience .card {
+    background-color: #a39e9e;
+    border-radius: 5px;
+    padding: 10px;
+    transition: .3s;
+}
+
+.professional-experience .card:hover {
+    box-shadow: 0 4px 8px 5px rgb(0, 0, 0,.6);
+}
+
+.professional-experience::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+.card-icon {
+    text-align: center;
+}
+.card-icon img {
+    margin-top: 20px;
+    width: 100px;
+}
+
+.rounded-image {
+    border: 5px solid #fff;
+    border-radius: 50%;
+    padding: 15px;
+}
+
+.card-title h2 {
+    background-color: #616161;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+
+.skills-container {
+    padding-right: 45px;
+}
+
+.skills-container li {
+    list-style: none;
+    font-weight: bolder;
+    margin: 30px 10px;
+    position: relative;
+}
+
+.skills-container li::before {
+    content: '';
+    position: absolute;
+    background-color: rgb(86,86,153,.5);
+    top: calc(100% + 5px);
+    left: 0px;
+    width: 100%;
+    height: 10px;
+    border-radius: 1000px;
+}
+
+.skills-container li::after {
+    content: '';
+    position: absolute;
+    background-color: rgb(86,86,153,1);
+    top: calc(100% + 5px);
+    left: 0px;
+    width: 0;
+    height: 10px;
+    border-radius: 1000px;
+
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count:unset;
+}
+
+.skills-container li.html::after {
+    animation-name: html;
+}
+@keyframes html {
+    to {
+        width: 90%;
+        background: maroon;
+    }
+}
+.skills-container li.css::after {
+    animation-name: css;
+}
+@keyframes css {
+    to {
+        width: 70%;
+        background: green;
+    }
+}
+.skills-container li.bootstrap::after {
+    animation-name: bootstrap;
+}
+@keyframes bootstrap {
+    to {
+        width: 95%;
+        background: red;
+    }
+}
+.skills-container li.javascript::after {
+    animation-name: javascript;
+}
+@keyframes javascript {
+    to {
+        width: 80%;
+        background: fuchsia;
+    }
+}
+.skills-container li.jquery::after {
+    animation-name: jquery;
+}
+@keyframes jquery {
+    to {
+        width: 65%;
+        background: aqua;
+    }
+}
+.skills-container li.node-js::after {
+    animation-name: node-js;
+}
+@keyframes node-js {
+    to {
+        width: 80%;
+        background: coral;
+    }
+}
+.skills-container li.github::after {
+    animation-name: github;
+}
+@keyframes github {
+    to {
+        width: 50%;
+        background: black;
+    }
+}
+.skills-container li.react-js::after {
+    animation-name: react-js;
+}
+@keyframes react-js {
+    to {
+        width: 99%;
+        background: blue;
+    }
+}
+/* ========================= */
+/* professional-section end*/
+/* ========================= */
+
+
+
+/* ========================= */
+/* contact-section start*/
+/* ========================= */
+.contact-section {
+    padding: 1% 7%;
+    background: #39a4ac;
+    color: #fff;
+}.achievement p {
+    font-size: 16px;
+}
+
+.contact-section::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.contact {
+    padding: 1% 2%;
+    text-align: center;
+}
+.contact input, textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    text-align: left;
+    border: none;
+    border-radius: 5px;
+    resize: none;
+    outline: none;
+}
+
+.contact input:focus, textarea:focus {
+    background: rgba(36, 7, 36, 0.405);
+    color: #fff;
+    box-shadow: 0 4px 8px 6px rgba(228, 8, 8, 0.4);
+}
+
+.contact button {
+    border: none;
+    border-radius: 12px;
+    background: #052d2f;
+    color: #fff;
+    cursor: pointer;
+    padding: 12px 15px;
+    margin: 10px;
+    width: 40%;
+    transition: .5s;
+    margin-top: 20px;
+}
+
+.contact button:hover {
+    background: #56960e;
+    font-size: 16px;
+    padding: 11px 15px;
+}
+
+.contact-links {
+    text-align: center;
+}
+
+.media-buttons .btn {
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 32px;
+    padding: 5px;
+    margin: 10px;
+    width: 60px;
+    background-color: #fff;
+    transition: .3s;
+}
+
+.media-buttons .btn:hover {
+    background-color: gray;
+}
+
+
+
+/* ========================= */
+/* contact-section end*/
+/* ========================= */
+
+/* ========================= */
+/* footer-section start*/
+/* ========================= */
+
+.footer-section::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.footer-section {
+    background-color: black;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.footer-menu a {
+    display: block;
+    margin: 15px 0;
+    font-size: 1rem;
+}
+
+.footer-menu a:hover {
+    color: gray;
+}
+
+/* ========================= */
+/* footer-section end*/
+/* ========================= */
+
+
+
+
+
+
+
+
+
+
+
+/* ========================= */
+/* footer-section start*/
+/* ========================= */
+
+/* ========================= */
+/* footer-section end*/
+/* ========================= */
